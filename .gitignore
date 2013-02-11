@@ -2,6 +2,8 @@
 /Cygwin.bat
 /Cygwin.ico
 /Cygwin-Terminal.ico
+/setup.log
+/setup.log.full
 /packages/
 /bin/
 /cygdrive/
