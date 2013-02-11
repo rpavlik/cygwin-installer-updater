@@ -4,6 +4,6 @@ setup ^
  --quiet-mode ^
  --no-desktop ^
  --only-site ^
- --site ftp://lug.mtu.edu/cygwin/ ^
- --local-package-dir "%~dp0packages" ^
- --root "%~dp0"
+ --site http://mirror.cs.vt.edu/pub/cygwin/cygwin/ ^
+ --local-package-dir %~dp0packages ^
+ --root %~dp0
