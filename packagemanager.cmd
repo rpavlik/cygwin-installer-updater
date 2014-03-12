@@ -1,6 +1,6 @@
 cd /d "%~dp0"
-updater\wget.exe --timestamping http://cygwin.com/setup.exe
-setup ^
+updater\wget.exe --timestamping http://cygwin.com/setup-x86.exe
+setup-x86 ^
  --package-manager ^
  --no-desktop ^
  --only-site ^
