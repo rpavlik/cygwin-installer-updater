@@ -1,4 +1,6 @@
 /setup.exe
+/setup-x86.exe
+/setup-x86_64.exe
 /Cygwin.bat
 /Cygwin.ico
 /Cygwin-Terminal.ico
