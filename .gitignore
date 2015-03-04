@@ -1,12 +1,21 @@
+# Cygwin installers/setup files
 /setup.exe
 /setup-x86.exe
 /setup-x86_64.exe
+
+# The packages cache we create
+/packages/
+
+# 64-bit flag files
+/x64*
+/x86_64*
+
+# Stuff Cygwin makes
 /Cygwin.bat
 /Cygwin.ico
 /Cygwin-Terminal.ico
 /setup.log
 /setup.log.full
-/packages/
 /bin/
 /cygdrive/
 /dev/
