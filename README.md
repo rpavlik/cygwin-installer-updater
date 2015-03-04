@@ -15,9 +15,14 @@ Main features:
 It's really just a bunch of batch files, but it makes my usage of Cygwin easier. Maybe it will help you too.
 
 ## How to use
-Clone this where you want your Cygwin install: usually `c:\cygwin` or something similar. Spaces are not handled well by Cygwin, don't use them.
+Clone this where you want your Cygwin install: usually `c:\cygwin` or something similar. Spaces are not handled well by Cygwin, don't use them. Something of this sort, a git bash example, should work:
 
-If you want 64-bit Cygwin, create a file called `x86_64` or `x64` - the presence of either of these files (or of the 64-bit installer) will indicate to the scripts to use the 64-bit stuff.
+```sh
+cd /c
+git clone https://github.com/rpavlik/cygwin-installer-updater.git cygwin
+```
+
+If you want 64-bit Cygwin, see below for config stuff before you go any further.
 
 To install from scratch, or to change your package selections, in such a setup, just run `packagemanager.cmd`. (It's preferred to do this rather than just running the downloaded setup file, since this sets some options including a local package cache dir and a mirror)
 
