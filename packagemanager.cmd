@@ -1,9 +1,9 @@
 cd /d "%~dp0"
-updater\wget.exe --timestamping http://cygwin.com/setup-x86.exe
-setup-x86 ^
+call updater\common.cmd
+%INSTALLER_FN% ^
  --package-manager ^
  --no-desktop ^
  --only-site ^
- --site http://mirror.cs.vt.edu/pub/cygwin/cygwin/ ^
+ --site %MIRROR% ^
  --local-package-dir %~dp0packages ^
  --root %~dp0
