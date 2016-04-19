@@ -22,7 +22,7 @@ cd /c
 git clone https://github.com/rpavlik/cygwin-installer-updater.git cygwin
 ```
 
-If you want 64-bit Cygwin, see below for config stuff before you go any further.
+If you're using a 64-bit version of Windows, it will default to installing a 64-bit version of Cygwin. Otherwise, it will default to a 32-bit version. If you don't like these defaults, see below for config stuff before you go any further.
 
 To install from scratch, or to change your package selections, in such a setup, just run `packagemanager.cmd`. (It's preferred to do this rather than just running the downloaded setup file, since this sets some options including a local package cache dir and a mirror)
 
@@ -32,6 +32,8 @@ To update your installed packages without prompting, run `update.cmd`
 
 - 32 vs 64 bit: The following logic is used to determine which installer to use. (Note that if you want to change/set this, do it before installing Cygwin - I have no idea what happens if you try to switch an install from 32 to 64 bit or vice-versa, but I bet it's not good.)
 	- If either of the `setup-*.exe` files is seen, the scripts will follow their lead and use that bitness.
-	- If neither are seen, but there is a file matching the pattern `x86_64*` or `x64*`, then 64-bit is assumed.
-	- By default, as a fallback, 32-bit is used.
+	- If neither are seen, but there is a file matching the pattern `x86_64*` or `x64*`, then 64-bit is assumed/forced.
+	- If there is a file matching the pattern `x32*`, then 32-bit is assumed/forced.
+	- The `PROCESSOR_ARCHITECTURE` environment variable is checked: 64-bit versions of Windows set this to `AMD64`, so if we find that, we use 64 bit.
+	- As a final fallback, 32-bit is used.
 - Mirror: You can override the default mirror I chose by putting the URL of your desired mirror in a file named `mirror.txt` in the Cygwin root dir. (My choice is in `updater\common.cmd` - but again, you don't need to edit that file to change the mirror)
