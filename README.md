@@ -36,4 +36,4 @@ To update your installed packages without prompting, run `update.cmd`
 	- If there is a file matching the pattern `x32*`, then 32-bit is assumed/forced.
 	- The `PROCESSOR_ARCHITECTURE` environment variable is checked: 64-bit versions of Windows set this to `AMD64`, so if we find that, we use 64 bit.
 	- As a final fallback, 32-bit is used.
-- Mirror: You can override the default mirror I chose by putting the URL of your desired mirror in a file named `mirror.txt` in the Cygwin root dir. (My choice is in `updater\common.cmd` - but again, you don't need to edit that file to change the mirror)
+- Mirror: You can override the default mirror I chose by putting the URL of your desired mirror in a file named `mirror.txt` in the Cygwin root dir. (My choice is in `updater\common.cmd` - but again, you don't need to edit that script to change the mirror.)
