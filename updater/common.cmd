@@ -18,6 +18,11 @@ if exist %INSTALLER_FN_64% goto :bit64
 rem A file starting with these prefixes will flag us into 64-bit mode
 if exist x64* goto :bit64
 if exist x86_64* goto :bit64
+rem A file starting with this prefix will force us into 32-bit mode
+if exist x32* goto :bit32
+
+rem To avoid rebase pain, etc, if we have a 64-bit machine, we should default to 64-bit now.
+if [%PROCESSOR_ARCHITECTURE%]==[AMD64] goto :bit64
 
 rem Fallback to 32-bit by default
 
